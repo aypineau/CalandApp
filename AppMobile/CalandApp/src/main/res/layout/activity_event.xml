@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/event_widget"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:id="@+id/time_bar_event">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00/00/0000"
+                android:textSize="15dp"
+                android:id="@+id/tv_date_event">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="During 00:00"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:id="@+id/tv_duration_event">
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="At 00:00"
+                android:layout_centerInParent="true"
+                android:textSize="15dp"
+                android:layout_toLeftOf="@id/tv_duration_event"
+                android:layout_toRightOf="@id/tv_date_event"
+                android:id="@+id/tv_hour_event">
+            </TextView>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time_bar_event"
+            android:id="@+id/tv_description"
+            android:text="Description"
+            android:layout_margin="40dp"
+            android:textSize="25dp">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_description"
+            android:id="@+id/tv_organizer"
+            android:textAlignment="textEnd"
+            android:text="Created by "
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15dp">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_organizer"
+            android:id="@+id/tv_group"
+            android:textAlignment="textEnd"
+            android:text="Including "
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15dp">
+        </TextView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_dell_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        android:text="Delete event" />
+
+
+</RelativeLayout>

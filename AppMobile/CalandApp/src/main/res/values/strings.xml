@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CalandApp</string>
+    <string name="server_url">https://make-progress.000webhostapp.com/ProjetDevMobile/</string>
+</resources>

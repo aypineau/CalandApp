@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".log.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Register" />
+
+    <ImageView
+        android:id="@+id/iv_backArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/abc_vector_test" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_above="@id/et_email"
+        android:layout_alignLeft="@id/et_email"/>
+
+
+    <EditText
+        android:layout_marginBottom="40dp"
+        android:id="@+id/et_email"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_above="@id/et_firstname"
+        android:inputType="textEmailAddress" />
+
+    <ImageView
+        android:id="@+id/iv_pseudo"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@id/et_email"
+        android:layout_alignTop="@id/et_email"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/tv_Firstname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Firstname"
+        android:layout_above="@id/et_firstname"
+        android:layout_alignLeft="@id/et_firstname"/>
+
+
+    <EditText
+        android:layout_marginBottom="40dp"
+        android:id="@+id/et_firstname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:layout_above="@id/et_lastname"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tv_lastname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Lastname"
+        android:layout_above="@id/et_lastname"
+        android:layout_alignLeft="@id/et_lastname"/>
+
+
+    <EditText
+        android:layout_marginBottom="40dp"
+        android:id="@+id/et_lastname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_password"
+        android:layout_alignLeft="@id/et_password"
+        android:text="Password            [not encripted !!]" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_lastname"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/iv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@id/et_password"
+        android:layout_alignTop="@id/et_password"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+    <TextView
+        android:id="@+id/tv_confirm_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/et_confirm_password"
+        android:layout_alignLeft="@id/et_confirm_password"
+        android:text="Confirm password" />
+
+    <EditText
+        android:id="@+id/et_confirm_password"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_password"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/iv_confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignEnd="@id/et_confirm_password"
+        android:layout_alignTop="@id/et_confirm_password"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/et_confirm_password"
+/>
+
+</RelativeLayout>
