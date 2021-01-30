@@ -67,6 +67,7 @@ public class GroupManagerPopup extends Dialog {
         // Build groupNameList as ListView if groupNameList different of null
         groupList.forEach(( groupListElement ) -> {
             groupNameList.add((String) groupListElement.get("group_name"));
+
         });
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(activity, android.R.layout.simple_list_item_multiple_choice, groupNameList);
@@ -104,14 +105,21 @@ public class GroupManagerPopup extends Dialog {
                                 public void accept(Map<String, Object> groupMap) {
                                     if (groupMap.get("group_name") == nameGroup ){
 
-                                        // Set value of group_id
-                                        int group_id = (int) groupMap.get("group_id");
+                                        if (groupMap.get("group_name") == "Personal group"){
 
-                                        // Send request for unlink group
-                                        ((HomeActivity) activity).unlinkGroup(group_id);
+                                            Toast.makeText(activity, "You can't leave your personal groups", Toast.LENGTH_SHORT).show();
 
-                                        // Close this popup
-                                        GroupManagerPopup.this.dismiss();
+                                        } else {
+
+                                            // Set value of group_id
+                                            int group_id = (int) groupMap.get("group_id");
+
+                                            // Send request for unlink group
+                                            ((HomeActivity) activity).unlinkGroup(group_id);
+
+                                            // Close this popup
+                                            GroupManagerPopup.this.dismiss();
+                                        }
                                     }
                                 }
                             });
@@ -132,10 +140,4 @@ public class GroupManagerPopup extends Dialog {
         });
 
     }
-
-
-
-
-
-
 }
