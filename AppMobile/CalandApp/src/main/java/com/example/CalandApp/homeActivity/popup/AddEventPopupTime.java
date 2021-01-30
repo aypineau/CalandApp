@@ -137,7 +137,7 @@ public class AddEventPopupTime extends Dialog {
                         Calendar calendar = Calendar.getInstance();
                         calendar.set(0,0,0,time_hours,time_minutes);
                         // Set selected time on text view
-                        tv_time.setText(DateFormat.format("hh:mm", calendar));
+                        tv_time.setText(DateFormat.format("HH:mm", calendar));
                     }
                 },24,0, true);
                 // Displayed previous selected time
@@ -165,7 +165,7 @@ public class AddEventPopupTime extends Dialog {
                         Calendar calendar = Calendar.getInstance();
                         calendar.set(0,0,0,duration_hours,duration_minutes);
                         // Set selected time on text view
-                        tv_duration.setText(DateFormat.format("hh:mm", calendar));
+                        tv_duration.setText(DateFormat.format("HH:mm", calendar));
 
                     }
                 },24, 24,true);
