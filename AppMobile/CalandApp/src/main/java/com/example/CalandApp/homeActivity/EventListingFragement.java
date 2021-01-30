@@ -95,7 +95,7 @@ public class EventListingFragement extends Fragment implements TimePickerDialog.
             }
         });
 
-        if (eventList.size() > 0){
+        if (futurEventList.size() > 0){
             // Hide tv_no_event_yet
             tv_no_event_yet.setVisibility(View.INVISIBLE);
             lv_event_list.setVisibility(View.VISIBLE);
