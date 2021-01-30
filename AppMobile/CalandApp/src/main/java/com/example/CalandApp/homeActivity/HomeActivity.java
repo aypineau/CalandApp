@@ -164,6 +164,7 @@ public class HomeActivity extends AppCompatActivity {
                 int group_id = cursor.getInt(0);
                 String group_name = cursor.getString(1);
                 String group_color = String.format("#%06x", new Random().nextInt(0xffffff + 1));
+                
 
                 // Set values in groupDetails Map
                 Map<String,Object> groupDetails = new HashMap<String,Object>();
@@ -172,8 +173,8 @@ public class HomeActivity extends AppCompatActivity {
                 groupDetails.put("group_color", group_color );
 
                 // For save data during activity opened
-                groupName.put(group_id, group_name);
                 groupColor.put(group_id, group_color);
+                groupName.put(group_id, group_name);
 
 
                 // add groupDetails Map int groupList ArrayList
@@ -212,14 +213,19 @@ public class HomeActivity extends AppCompatActivity {
                 int group_id = jOBJ_group.getInt("group_id");
                 String group_name = jOBJ_group.getString("group_name");
 
+                // If group group_name is perso_uidXX, change for personal group
+                if(group_name.equals("perso_uid"+user_id)){
+                    group_name="Personal group";
+                }
+
                 // Add data to local DB
                 sqlLiteGroupDB.addGroup(group_id,group_name);
 
                 // Set values in groupDetails Map
                 Map<String,Object> groupDetails = new HashMap<String,Object>();
                 groupDetails.put("group_id", group_id);
-                groupDetails.put("group_name", group_name);
                 groupDetails.put("group_color", groupColor.get("group_id"));
+                groupDetails.put("group_name", group_name);
 
 
                 // add groupDetails Map int groupList ArrayList
