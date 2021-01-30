@@ -143,11 +143,6 @@ public class EventListingFragement extends Fragment implements TimePickerDialog.
                     String group_name = (String) ((Map) groupList.get(itemIndex)).get("group_name");
                     String color_group = ((HomeActivity) getActivity()).getGroupColor(group_id);
 
-                    // If group group_name is perso_uidXX, change for personal group
-                    if(group_name.equals("perso_uid"+((HomeActivity)getActivity()).getUser_id())){
-                        group_name="Personal group";
-                    }
-
                     tv_group.setText(group_name);
                     sp_group_color.setBackgroundColor(Color.parseColor(color_group));
 
